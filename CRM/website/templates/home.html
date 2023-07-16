@@ -32,6 +32,7 @@
 
           {% for record in records  %}
           <tr>
+          <td><a href="{% url "record" record.id %}"> {{record.id}}</td>
           <td>{{record.first_name}}
           {{record.last_name}}</td>
           <td>{{record.email}}</td>
@@ -40,7 +41,8 @@
           <td>{{record.city}}</td>
           <td>{{record.zipcode}}</td>
           <td>{{record.created_at}}</td>
-          <td><a href="{% url "record" record.id %}"> {{record.id}}</td>
+          
+          
           
 
         </tr>
